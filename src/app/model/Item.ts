@@ -1,12 +1,9 @@
-import {EnumValue} from "@angular/compiler-cli/src/ngtsc/partial_evaluator";
-
 export interface Item {
-  id: number;
+  id: string;
   name: string;
-  price: string;
+  description: string;
+  price: number;
   image: string;
+  amountOfStock: number;
   stockUrgency: string;
 }
-
-
-

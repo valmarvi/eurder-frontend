@@ -1,0 +1,33 @@
+<main>
+  <section  *ngIf="item">
+    <h3 class="section-title">Item {{item.id}}</h3>
+    <form  [formGroup]="sendIdForm"> <!--[formGroup]="createItemForm" (ngSubmit)="onSubmit()"-->
+      <div class="row">
+        <div class="col-1">
+          <label class="form-label" for="name">Name</label>
+          <input class="form-control" id="name" type="text" readonly value="{{item.name}}"/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-1">
+          <label class="form-label" for="description">Description</label>
+          <textarea id="description" rows="5" readonly value="{{item.description}}"></textarea>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-1">
+          <label class="form-label" for="price">Price</label>
+          <input class="form-control" id="price" type="text" readonly value="{{item.price}}"/>
+        </div>
+        <div class="col-1">
+          <label class="form-label" for="amountOfStock">Amount of Stock</label>
+          <input class="form-control" id="amountOfStock" type="text" readonly value="{{item.amountOfStock}}"/>
+        </div>
+      </div>
+      <div class="row">
+        <button class="col-4 btn btn-edit" type="submit" routerLink="/update-item/{{item.id}}">EDIT</button>
+        <button class="col-1 btn" routerLink="">BACK</button>
+      </div>
+    </form>
+  </section>
+</main>

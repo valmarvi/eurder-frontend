@@ -3,15 +3,14 @@
     <div>
       <h3 class="section-title">Items
         <div>
-          <label class="form-label" for="name">Search Item</label>
-          <input class="form-control" id="name" type="text" [(ngModel)]="searchText"/>
+          <input class="form-control" id="name" type="text" [(ngModel)]="searchText" placeholder="Find by name..."/>
         </div>
       </h3>
     </div>
     <ul class="card-list">
-      <li class="card" *ngFor="let item of items | nameFilter: searchText">
-        <div class="card-title">{{item.name}}</div>
-        <img class="card-image" src="/assets/images/item-image.png" alt="item image">
+      <li class="card" *ngFor="let item of items | Name: searchText">
+        <div class="card-title" routerLink="/item-detail/{{item.id}}">{{item.name}}</div>
+        <img class="card-image" src="/assets/images/item-image.png" alt="item image" routerLink="/item-detail/{{item.id}}">
         <div class="card-footer">
           <div>Price: &euro; {{item.price}}</div>
           <div class="stock">

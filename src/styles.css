@@ -23,7 +23,7 @@ header {
 }
 
 main {
-  padding: 50px;
+  padding: 20px;
 }
 
 footer {
@@ -105,6 +105,10 @@ form {
   padding-right: 5px;
 }
 
+textarea {
+width: 100%;
+}
+
 .col-4 {
   flex: 4;
   padding-left: 5px;
@@ -137,6 +141,19 @@ form {
   cursor: pointer;
 }
 
+textarea {
+  width: 100%;
+
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+
+  padding-top: 0.375rem;
+  padding-right: 0.75rem;
+  padding-bottom: 0.375rem;
+  padding-left: 0.75rem;
+}
+
 .btn:hover {
   text-decoration: none;
 }
@@ -162,6 +179,11 @@ form {
 .btn-create {
   color: white;
   background: limegreen;
+}
+
+.btn-edit {
+  color: white;
+  background: blue;
 }
 
 .card {
@@ -201,4 +223,9 @@ form {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
 }

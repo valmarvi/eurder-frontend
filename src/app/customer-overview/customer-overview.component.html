@@ -1,0 +1,42 @@
+<main>
+  <section>
+    <div>
+      <h3 class="section-title">Customers
+        <div>
+          <input class="form-control" id="name" type="text" [(ngModel)]="searchText" placeholder="Filter by First Name..."/>
+        </div>
+      </h3>
+    </div>
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>FIRSTNAME</th>
+        <th>LASTNAME</th>
+        <th>
+          <button class="col-4 btn btn-create" type="submit">NEW CUSTOMER</button>
+        </th>
+      </tr>
+    </table>
+    <table *ngFor="let customer of customers | Firstname: searchText">
+      <tr>
+        <td>{{customer.id}}</td>
+        <td>{{customer.firstname}}</td>
+        <td>{{customer.lastname}}</td>
+      </tr>
+    </table>
+  </section>
+</main>
+
+<!--<ul class="card-list">-->
+<!--  <li class="card" *ngFor="let item of items | nameFilter: searchText">-->
+<!--    <div class="card-title" routerLink="/item-detail/{{item.id}}">{{item.name}}</div>-->
+<!--    <img class="card-image" src="/assets/images/item-image.png" alt="item image" routerLink="/item-detail/{{item.id}}">-->
+<!--    <div class="card-footer">-->
+<!--      <div>Price: &euro; {{item.price}}</div>-->
+<!--      <div class="stock">-->
+<!--        <span>{{item.stockUrgency}}</span>-->
+<!--        <img class="icon" src="/assets/images/warning-icon.png" alt="warning">-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </li>-->
+<!--</ul>-->

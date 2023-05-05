@@ -12,8 +12,7 @@ export class ItemOverviewComponent implements OnInit{
   items: Item[] = []
   searchText: string = "";
 
-  constructor(private itemService: ItemService) {
-  }
+  constructor(private itemService: ItemService) {}
 
   ngOnInit(): void {
     this.getItems();

@@ -4,7 +4,7 @@ import { LayoutComponent } from './layout.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ItemOverviewComponent } from '../item-overview/item-overview.component';
-import {RouterOutlet} from "@angular/router";
+import {RouterLink, RouterOutlet} from "@angular/router";
 
 
 
@@ -19,7 +19,8 @@ import {RouterOutlet} from "@angular/router";
   ],
   imports: [
     CommonModule,
-    RouterOutlet
+    RouterOutlet,
+    RouterLink
   ]
 })
 export class LayoutModule { }

@@ -18,4 +18,16 @@ export class ItemService {
     return this.http.get<Item[]>(this.itemURL)
       .pipe(map(items => items.sort((a: Item, b: Item) => a.name.localeCompare(b.name))));
   }
+
+  addItem(item: Item): Observable<Item>{
+    return this.http.post<Item>(this.itemURL, item);
+  }
+
+  findById(id: string): Observable<Item> {
+    return this.http.get<Item>(`${this.itemURL}/${id}`);
+  }
+
+  updateItem(id: string, item: Item): Observable<Item> {
+    return this.http.put<Item>(`${this.itemURL}/${id}`, item);
+  }
 }

@@ -1,8 +1,8 @@
-import { PipesPipe } from './pipes.pipe';
+import { NamePipe } from './name.pipe';
 
 describe('PipesPipe', () => {
   it('create an instance', () => {
-    const pipe = new PipesPipe();
+    const pipe = new NamePipe();
     expect(pipe).toBeTruthy();
   });
 });

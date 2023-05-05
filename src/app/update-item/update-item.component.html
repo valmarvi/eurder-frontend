@@ -1,0 +1,33 @@
+<main>
+  <section>
+    <h3 class="section-title">Item {{this._id}}</h3>
+    <form  [formGroup]="updateItemForm" (ngSubmit)="onSubmit()"> <!--[formGroup]="createItemForm" (ngSubmit)="onSubmit()"-->
+      <div class="row">
+        <div class="col-1">
+          <label class="form-label" for="name">Name</label>
+          <input formControlName="name" class="form-control" id="name" type="text"/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-1">
+          <label class="form-label" for="description">Description</label>
+          <textarea formControlName="description" id="description" rows="5"></textarea>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-1">
+          <label class="form-label" for="price">Price</label>
+          <input formControlName="price" class="form-control" id="price" type="text"/>
+        </div>
+        <div class="col-1">
+          <label class="form-label" for="amountOfStock">Amount of Stock</label>
+          <input formControlName="amountOfStock" class="form-control" id="amountOfStock" type="text"/>
+        </div>
+      </div>
+      <div class="row">
+        <button class="col-4 btn btn-edit" type="submit">UPDATE</button>
+        <button class="col-1 btn" routerLink="">BACK</button>
+      </div>
+    </form>
+  </section>
+</main>
