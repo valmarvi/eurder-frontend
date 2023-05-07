@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {FormBuilder, FormGroup} from "@angular/forms";
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {ItemService} from "../service/item.service";
 
 @Component({
@@ -10,10 +10,10 @@ import {ItemService} from "../service/item.service";
 export class CreateItemComponent {
 
   createItemForm: FormGroup = this.formBuilder.group({
-    name: '',
-    description: '',
-    price: '',
-    amountOfStock: ''
+    name: ['',Validators.required, Validators.minLength(5)],
+    description: ['',Validators.required],
+    price: ['',Validators.required],
+    amountOfStock: ['',Validators.required]
   });
 
   constructor(private itemService: ItemService, private formBuilder: FormBuilder) {}
